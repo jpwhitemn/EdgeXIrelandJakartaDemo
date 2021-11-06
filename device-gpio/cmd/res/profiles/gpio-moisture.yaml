@@ -1,0 +1,17 @@
+name: "GPIO-Moist-Profile"
+manufacturer: "IOTech Systems"
+model: "IOTech1"
+labels:
+  - "GPIO"
+  - "moisture"
+description: "Moisture sensor via RP3 and GPIO - ping 21"
+
+deviceResources:
+  -
+    name: "Moisture"
+    isHidden: false
+    description: "moisture state"
+    attributes: { line: 21 }
+    properties:
+      valueType: "Bool"
+      readWrite: "R"

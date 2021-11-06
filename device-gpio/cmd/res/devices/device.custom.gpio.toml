@@ -1,0 +1,13 @@
+# Pre-define Devices
+[[DeviceList]]
+  Name = "GPIOMoisture"
+  ProfileName = "GPIO-Moist-Profile"
+  Description = "GPIO Moisture sensor on RP3"
+  Labels = ["RP3", "GPIO", "moisture"]
+  [DeviceList.Protocols]
+  [DeviceList.Protocols.other]
+    Address = 'device-moisture-01'
+  [[DeviceList.AutoEvents]]
+    Interval = "10s"
+    OnChange = false
+    SourceName = "Moisture"

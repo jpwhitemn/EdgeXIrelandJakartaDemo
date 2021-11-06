@@ -1,0 +1,25 @@
+name: "Comet-Probe-Modbus-Profile"
+manufacturer: "Comet Systems"
+model: "T0310"
+labels:
+- "Temperature"
+description: "Comet Systems T0310 Temperature Probe interface"
+
+deviceResources:
+-
+  name: "ProbeTemperature"
+  isHidden: false
+  description: "Probe Temperature °F (Read Only)"
+  attributes:
+          { primaryTable: "INPUT_REGISTERS", startingAddress: 48, rawType: "Int16"}
+  properties:
+    valueType: "Int16"
+    readWrite: "R"
+
+deviceCommands:
+-
+  name: "Temp"
+  readWrite: "R"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "ProbeTemperature"} 

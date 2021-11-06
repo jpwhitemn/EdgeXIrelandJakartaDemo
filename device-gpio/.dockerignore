@@ -1,0 +1,13 @@
+Dockerfile*
+docker-compose*
+.dockerignore
+.gitignore
+.env
+*/bin
+*/obj
+README.md
+.vscode
+.idea/
+go.sum
+res/
+!res/docker*

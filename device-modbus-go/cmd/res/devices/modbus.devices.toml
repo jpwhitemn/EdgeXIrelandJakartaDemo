@@ -1,0 +1,21 @@
+# Pre-define Devices
+[[DeviceList]]
+  Name = "temperature-probe"
+  ProfileName = "Comet-Probe-Modbus-Profile"
+  Description = "Comet Systems T0310 Temperature Probe"
+  labels = [ "Temperature","modbus RTU"]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.modbus-rtu]
+       Address = "/dev/ttyS0"
+       BaudRate = "9600"
+       DataBits = "8"
+       StopBits = "2"
+       Parity = "N"
+       UnitID = "1"
+       Timeout = "5"
+       IdleTimeout = "5"
+  [[DeviceList.AutoEvents]]
+    Interval = "10s"
+    OnChange = true
+    SourceName = "ProbeTemperature"
+

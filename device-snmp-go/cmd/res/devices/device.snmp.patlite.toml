@@ -1,0 +1,28 @@
+# Pre-define Devices
+# NOTE: You will need to modify the Address to a DNS or named resource potentially.
+#       Port 161 is the default SNMP provider port.
+[[DeviceList]]
+Name = "patlite"
+ProfileName = "patlite"
+Description = "Patlite Signal Tower"
+Labels = [ "device-snmp-patlite" ]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.TCP]
+    Address = "10.0.0.14"
+    Port = "161"
+  [[DeviceList.AutoEvents]]
+  Interval = "10s"
+  OnChange = true
+  SourceName = "RedLightCurrentState"
+  [[DeviceList.AutoEvents]]
+  Interval = "10s"
+  OnChange = true
+  SourceName = "AmberLightCurrentState"
+  [[DeviceList.AutoEvents]]
+  Interval = "10s"
+  OnChange = true
+  SourceName = "GreenLightCurrentState"
+  [[DeviceList.AutoEvents]]
+  Interval = "10s"
+  OnChange = true
+  SourceName = "BuzzerCurrentState"
