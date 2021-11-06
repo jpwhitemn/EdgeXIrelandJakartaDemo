@@ -1,0 +1,4 @@
+./device-snmp-go/cmd/device-snmp
+./device-gpio/cmd/device-gpio
+./device-modbus-go/cmd/device-modbus
+./app-service-influx/app-service-influx
